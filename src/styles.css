@@ -1,0 +1,503 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+:root {
+  font-size: calc(0.5vw + 1vh + 0.5vmin);
+  --body-bg: rgb(255, 239, 242);
+  --day-bg: #ffe1a8;
+  --day-bg-hl: rgb(231, 173, 110);
+  --turno-bg: #a7d8f7;
+  --turno-depi: #74ff74;
+  --turno-hydra: rgb(247, 235, 70);
+  --white: #fff;
+  --black: #333;
+  --nav-bg: #a5a5f7;
+  --nav-y: 0rem;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  user-select: none;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--body-bg);
+  color: var(--black);
+}
+#root {
+  width: 100%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+a,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+}
+button,
+input[type="submit"] {
+  cursor: pointer;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  padding: 0.5em 1em;
+}
+h1 {
+  letter-spacing: 4px;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*=======================================================*/
+/*    HEADER      */
+
+.header-container {
+  background: var(--nav-bg);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.off-line {
+  color: rgb(182, 54, 3);
+  width: 2rem;
+  height: 2rem;
+}
+
+.client-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+.avatar {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* ============================================= */
+/*                 LOGIN                         */
+.login-container {
+  width: 25rem;
+  height: 25rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #eee;
+  position: relative;
+}
+.login-container .logo {
+  border: 2px solid hsl(20, 37%, 64%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+  background: #b68ab1;
+  box-shadow: 10px 10px 15px rgb(0, 0, 0, 0.5);
+}
+
+.login-container .logo .nombre {
+  font-size: 4.5rem;
+  font-weight: bolder;
+  font-family: "Marck Script", cursive;
+  text-shadow: 2px 2px 4px black;
+  line-height: 1;
+}
+.login-container .logo .prof {
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px black;
+  font-size: 0.8rem;
+}
+/*=======================================================*/
+/*    LOADING      */
+.loading-container {
+  position: absolute;
+  font-size: 3.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.75);
+  color: var(--white);
+  bottom: 0;
+  top: 3.5rem;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 8rem;
+}
+.loader4 {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin: 1rem 2rem;
+  animation: rotation 1s linear infinite;
+}
+.loader4::after,
+.loader4::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  width: 1rem;
+  height: 1rem;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+}
+.loader4::before {
+  left: auto;
+  right: 0;
+  transform: translate(50%, 100%);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*=======================================================*/
+/*    CALENDARIO      */
+.calendario-container {
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+.titulo-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.chevron {
+  font-size: 1.5rem;
+  height: 2rem;
+  width: 5rem;
+  padding: 0.25rem;
+}
+.mes-titulo {
+  text-align: center;
+  padding: 0.5rem;
+}
+.calendar-header-container {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.calendario-container .calendar-header-container span {
+  text-align: center;
+  flex: 1;
+}
+.semana-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.semana-total {
+  text-align: right;
+  padding: 0 1rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.dia-container {
+  border: 1px solid #999;
+  min-height: 6rem;
+  flex: 1;
+  background: var(--day-bg);
+}
+.dia-container .dia-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding-left: 0.4rem;
+  font-size: 1.2rem;
+}
+.dia-container .plus-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.65rem;
+}
+
+.dia-container .turnos,
+.dia-container .depilaciones {
+  text-align: center;
+  background: var(--turno-bg);
+  border: 1px solid #888;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.dia-container .depilaciones {
+  background: var(--turno-depi);
+}
+.dia-container .turnos.hydra {
+  background: var(--turno-hydra);
+}
+
+.dia-container .turnos .turno,
+.dia-container .depilaciones .depilacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 316px;
+  padding: 0 0.5rem;
+}
+.dia-container .turnos .turno:not(:last-of-type),
+.dia-container .depilaciones .depilacion:not(:last-of-type) {
+  border-bottom: 1px solid #888;
+}
+.dia-container .turnos .turno span,
+.dia-container .depilaciones .depilacion span {
+  padding: 0.2rem;
+  font-weight: bold;
+}
+.turnos-numero,
+.depis-numero {
+  font-weight: bold;
+}
+
+.hora {
+  width: 5ch;
+}
+.nombre {
+  margin: 0 0.5rem;
+  padding: 0;
+  width: 8ch;
+  text-align: left;
+}
+.tratamiento {
+  text-align: left;
+}
+.duracion {
+  width: 5ch;
+  margin-left: auto;
+}
+.valor {
+  width: 7ch;
+}
+
+.icon {
+  min-height: 2rem;
+  min-width: 2rem;
+  padding: 0.4rem;
+}
+
+/*=======================================================*/
+/*    TURNO NUEVO      */
+.turnoNuevo-container {
+  padding: 2rem;
+  margin: 0 auto;
+  min-height: 95vh;
+  position: relative;
+  background: var(--day-bg);
+  font-size: 1.2rem;
+}
+.form-cancel-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  border: 1px solid #999;
+  border-radius: 1rem;
+  background: pink;
+}
+.form-container h2 {
+  margin: 0.5rem 0.9rem;
+}
+.form-container .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.15);
+  padding: 1rem;
+  gap: 1rem;
+}
+.form-container .hora-container {
+  border-bottom: 1px solid rgb(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container .row.hora {
+  border: none;
+  width: 100%;
+}
+.form-container .row.gasto {
+  justify-content: flex-end;
+  gap: 2rem;
+}
+.form-container .row input:not([type="checkbox"]),
+.form-container .row select {
+  width: 60%;
+  padding-left: 1rem;
+  color: var(--black);
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+}
+
+.form-container .tipo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-container .tipo-container input[type="checkbox"] {
+  display: none;
+}
+
+.form-container .tipo-container input[type="checkbox"]:checked + label {
+  background: pink;
+}
+
+.form-container .tipo-container label {
+  border: 1px solid #aaa;
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.form-container .tipo-container .combos {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.form-container .error-msg {
+  white-space: pre;
+  text-align: center;
+  color: rgb(196, 22, 22);
+}
+
+.form-container button {
+  display: block;
+  margin: auto;
+  color: var(--black);
+  border-radius: 1rem;
+  border: 1px solid #999;
+  background: pink;
+}
+
+.form-container .form-submit-btn {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/*=======================================================*/
+/*    FICHA      */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem;
+  display: inline-flex;
+  position: relative;
+}
+
+.search-container input {
+  padding-right: 1.75rem;
+  padding-left: 0.5rem;
+  text-align: center;
+  width: 20ch;
+}
+
+.search-container .search-icon {
+  position: absolute;
+  right: 0.2rem;
+  font-size: 1.3rem;
+}
+
+.clienta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #aaa;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+}
+
+.clienta-header span:nth-child(2) {
+  margin-left: 1rem;
+}
+
+.historial-container {
+  border-bottom: 1px solid #aaa;
+  padding: 0.5rem 4rem;
+  background: rgb(255, 252, 252);
+}
+
+.historial-container .clienta-label {
+  font-weight: bold;
+}
+
+.clienta-data .clienta-total {
+  font-weight: bold;
+  text-align: right;
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 380px) {
+  .dia-container .turnos .turno,
+  .dia-container .depilaciones .depilacion {
+    width: 408px;
+  }
+}
