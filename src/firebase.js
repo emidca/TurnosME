@@ -1,20 +1,22 @@
-/*    react-auth     */
-
+// Importa solo los módulos necesarios
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-// Your web app's Firebase configuration
+// Configuración de tu proyecto Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBfgCpZnV6dZnEQeg_rbXkcWWgIwZJ9iQo",
-  authDomain: "react-turnos-244e1.firebaseapp.com",
-  projectId: "react-turnos-244e1",
-  storageBucket: "react-turnos-244e1.appspot.com",
-  messagingSenderId: "927193625823",
-  appId: "1:927193625823:web:f79b70aea7357b79c7a56a"
+  apiKey: "AIzaSyCokY5atRdvU8UkOgsAJDuoWwzinFCd--s",
+  authDomain: "turnos-me.firebaseapp.com",
+  projectId: "turnos-me",
+  storageBucket: "turnos-me.firebasestorage.app",
+  messagingSenderId: "314472133464",
+  appId: "1:314472133464:web:e53cb026192511a3806b2d",
+  measurementId: "G-E9GNRFNW68" // Opcional, puedes omitirlo si no usas Analytics
 };
 
-// Initialize Firebase
+// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-export const auth = getAuth(app);
+
+// Exporta Firestore (Base de datos) y Auth (Autenticación)
+export const db = getFirestore(app); // Base de datos
+export const auth = getAuth(app);    // Autenticación
